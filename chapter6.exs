@@ -65,3 +65,19 @@ defmodule Chop do
   end
 end
 Chop.guess(273, 1..1000)
+
+
+sep.()
+## ModulesAndFunctions-7
+# Conv float to str with two decimal digits (Erlang)
+IO.puts :io.format("~.2f~n", [1003.14152])
+# Get the value of an OS ENV var (Elixir)
+IO.puts System.get_env("USER")
+# Return the extension component of a filename (Elixir)
+IO.puts Path.extname("dave/test.exs")
+# Return the current working directory of the process (Elixir)
+IO.puts System.cwd()
+# Convert a string containing JSON into Elixir data structures
+# Poison library, or json
+# Execute a command in your OS's shell
+Mix.Shell.cmd("ls", &IO.puts(&1))

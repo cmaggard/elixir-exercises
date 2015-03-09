@@ -48,3 +48,13 @@ defmodule MyList do
 end
 IO.puts MyList.caesar('helpme', 13)
 IO.puts MyList.caesar(MyList.caesar('helpme', 13), 13)
+
+
+sep.()
+## ListsAndRecursion-4
+defmodule MyList do
+  def span(from, to), do: _span(from, to, [])
+  def _span(from, to, lst) when from > to, do: lst
+  def _span(from, to, lst), do: _span(from+1, to, lst ++ [from])
+end
+MyList.span(1, 10)  # [1,2,3,4,5,6,7,8,9,10]
